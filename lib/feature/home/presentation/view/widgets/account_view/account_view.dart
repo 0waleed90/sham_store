@@ -9,7 +9,7 @@ class AccountView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('My Account', style: Styles.textStyle32)),
+      appBar: AppBar(title: Text('My Account ', style: Styles.textStyle32)),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
