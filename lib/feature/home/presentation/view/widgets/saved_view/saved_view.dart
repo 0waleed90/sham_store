@@ -11,7 +11,7 @@ class SavedView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text('Saved Items',style: Styles.textStyle32),),
     body:  SizedBox(
-      height:700,
+      height:MediaQuery.of(context).size.height*0.8,
       child: GridView.builder(
         itemCount: 10,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(

@@ -6,8 +6,8 @@ import '../../../../../core/util/styles.dart';
 import '../../../../../core/util/widgets/custom_button.dart';
 
 class EnterOption extends StatelessWidget {
-  const EnterOption({super.key});
-
+  const EnterOption({super.key, required this.normalEnterOnTap});
+final VoidCallback normalEnterOnTap;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -18,7 +18,7 @@ class EnterOption extends StatelessWidget {
           textColor: Colors.white,
           width: 500,
           onTap: () {
-            GoRouter.of(context).go(AppRouter.kHomeView);
+            normalEnterOnTap();
           },
         ),
         const SizedBox(height: 25),

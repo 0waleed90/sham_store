@@ -24,7 +24,7 @@ class SearchView extends StatelessWidget {
               suffixIcon: Icon(Icons.mic),
             ),
           ), SizedBox(
-            height: 628,
+            height: MediaQuery.of(context).size.height*0.68,
             child: GridView.builder(
               itemCount: 10,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(

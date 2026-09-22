@@ -70,7 +70,7 @@ class DiscoverView extends StatelessWidget {
             CategoryFilterBar(),
             SizedBox(height: 20),
             SizedBox(
-              height: 584,
+              height: MediaQuery.of(context).size.height * 0.63,
               child: GridView.builder(
                 itemCount: 10,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(

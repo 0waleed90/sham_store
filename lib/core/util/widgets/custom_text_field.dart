@@ -8,29 +8,38 @@ class CustomTextField extends StatelessWidget {
     this.suffixIcon,
     required this.readOnly,
     this.onTap,
+    this.onSubmitted,
+    this.onChanged,
+    this.controller,
   });
   final String hintText;
   final Icon? prefixIcon;
   final Icon? suffixIcon;
   final bool readOnly;
   final VoidCallback? onTap;
+  final ValueChanged<String>? onSubmitted;
+  final ValueChanged<String>? onChanged;
+  final TextEditingController? controller;
+
   @override
   Widget build(BuildContext context) {
     return TextField(
+      controller: controller,
+      onChanged: onChanged,
+      onSubmitted: onSubmitted,
       onTap: onTap,
       readOnly: readOnly,
-
       decoration: InputDecoration(
         prefixIcon: prefixIcon,
         suffixIcon: suffixIcon,
-        enabledBorder: OutlineInputBorder(
+        enabledBorder: const OutlineInputBorder(
           borderSide: BorderSide(color: Colors.black12),
         ),
         border: OutlineInputBorder(
-          borderRadius: .circular(8),
-          borderSide: BorderSide(color: Colors.black),
+          borderRadius: BorderRadius.circular(8),
+          borderSide: const BorderSide(color: Colors.black),
         ),
-        errorBorder: OutlineInputBorder(
+        errorBorder: const OutlineInputBorder(
           borderSide: BorderSide(color: Colors.red),
         ),
         hintText: hintText,
